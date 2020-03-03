@@ -14,7 +14,7 @@ import VideoPlayer from 'react-native-video'
 import KeepAwake from 'react-native-keep-awake'
 import Orientation from 'react-native-orientation'
 import Icons from 'react-native-vector-icons/MaterialIcons'
-import { Controls } from './'
+import { Controls } from '../components'
 import { checkSource } from './utils'
 const Win = Dimensions.get('window')
 const backgroundColor = '#000'
@@ -101,6 +101,7 @@ class Video extends Component {
       inlineHeight,
       duration: data.duration
     }, () => {
+      this.onSeekRelease(data.currentTime)
       Animated.timing(this.animInline, { toValue: inlineHeight, duration: 200 }).start()
       this.props.onPlay(!this.state.paused)
       if (!this.state.paused) {
