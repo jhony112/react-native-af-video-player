@@ -21,7 +21,7 @@ A customisable React Native video player for Android and IOS
 ## Install
 
 ```shell
-npm i -S react-native-af-video-player
+npm i react-native-video-player-hp
 ```
 
 Then link
@@ -39,7 +39,7 @@ react-native link react-native-linear-gradient
 ```jsx
 import React from 'react'
 import { AppRegistry, StyleSheet, View } from 'react-native'
-import Video from 'react-native-hp-video-player'
+import Video from 'react-native-video-player-hp'
 
 const styles = StyleSheet.create({
   container: {
