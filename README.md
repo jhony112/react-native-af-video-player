@@ -39,7 +39,7 @@ react-native link react-native-linear-gradient
 ```jsx
 import React from 'react'
 import { AppRegistry, StyleSheet, View } from 'react-native'
-import Video from 'react-native-af-video-player'
+import Video from 'react-native-hp-video-player'
 
 const styles = StyleSheet.create({
   container: {
