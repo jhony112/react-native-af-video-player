@@ -5,13 +5,14 @@ import {
   View,
   StyleSheet,
   Text,
-  Image
+  Image,
+  TouchableOpacity
 } from 'react-native'
 
 import LinearGradient from 'react-native-linear-gradient'
 import { ToggleIcon } from '../components'
 import { checkSource } from './utils'
-
+import Icons from 'react-native-vector-icons/MaterialIcons'
 const backgroundColor = 'transparent'
 
 const styles = StyleSheet.create({
@@ -42,6 +43,8 @@ const TopBar = (props) => {
   const {
     logo,
     more,
+      navigator,
+      showBack,
     title,
     theme,
     onMorePress
@@ -49,6 +52,15 @@ const TopBar = (props) => {
   return (
     <LinearGradient colors={['rgba(0,0,0,0.75)', 'rgba(0,0,0,0)']} style={styles.container}>
       <View style={styles.row}>
+        {showBack && navigator &&  <TouchableOpacity
+            onPress={() => navigator.pop()}
+        >
+          <Icons
+              name={ 'arrow-back'}
+              color={props.theme}
+              size={45}
+          />
+        </TouchableOpacity>}
         { logo && <Image style={styles.logo} resizeMode="contain" {...checkSource(logo)} />}
         <Text
           style={[styles.title, { color: theme.title }]}

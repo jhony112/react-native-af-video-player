@@ -351,6 +351,8 @@ class Video extends Component {
       onTimedMetadata,
       resizeMode,
       onMorePress,
+        showBack,
+        navigator,
       inlineOnly,
       playInBackground,
       playWhenInactive,
@@ -411,6 +413,8 @@ class Video extends Component {
           togglePlay={() => this.togglePlay()}
           paused={paused}
           muted={muted}
+          showBack={showBack}
+          navigator = {navigator}
           fullscreen={fullScreen}
           loading={loading}
           onSeek={val => this.seek(val)}
