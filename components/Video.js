@@ -102,7 +102,7 @@ class Video extends Component {
       duration: data.duration
     }, () => {
       this.onSeekRelease(data.currentTime)
-      Animated.timing(this.animInline, { toValue: inlineHeight, duration: 200 }).start()
+      Animated.timing(this.animInline, { toValue: inlineHeight, duration: 200,useNativeDriver: true }).start()
       this.props.onPlay(!this.state.paused)
       if (!this.state.paused) {
         KeepAwake.activate()

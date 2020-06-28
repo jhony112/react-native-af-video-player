@@ -56,9 +56,10 @@ const TopBar = (props) => {
             onPress={() => navigator.pop()}
         >
           <Icons
-              name={ 'arrow-back'}
-              color={props.theme}
-              size={45}
+              style={{marginLeft: 10, marginRight:10}}
+              name={'arrow-back'}
+              color={'white'}
+              size={25}
           />
         </TouchableOpacity>}
         { logo && <Image style={styles.logo} resizeMode="contain" {...checkSource(logo)} />}
